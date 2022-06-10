@@ -1,7 +1,9 @@
 # Arquivo de funções auxiliares do sistema
+import sys
+from time import sleep    
+
 
 ############# CORES E LAYOUT #############
-from queue import Empty
 
 
 FCORES = {
@@ -42,10 +44,7 @@ def limpar_terminal():
     print('\n' * os.get_terminal_size().lines)
     
 
-def efeito_digitar(capitulo: dict):
-    import sys
-    from time import sleep
-    
+def efeito_digitar(capitulo: dict):    
     for frase in capitulo:
         for letra in frase:
             sys.stdout.write(letra)

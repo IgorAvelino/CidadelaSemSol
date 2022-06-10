@@ -1,22 +1,10 @@
-import json
-
+import capitulos
 import arte
 import faux
 from time import sleep
 
 if __name__ == "__main__":
-    try:
-        file = open('config.json', 'r') 
-    
-    except FileNotFoundError:
-        print(f'\n{faux.LAYOUT["F_ERROR"]} Não foi possível encontrar o arquivo de configuração!')
-        exit()
-    
-    else:
-        try:
-            cfg = json.load(file)
-        except Exception as error: faux.generic_error(error)
-    
+
     try:
         
         frase = f'\n\n{faux.LAYOUT["INF"]} Saudações Jogador, gostaria de ver as regras? [S]/[N]\n'
@@ -26,7 +14,7 @@ if __name__ == "__main__":
         op = str(input('>> Digite aqui: ')).upper()
 
         if op == 'S':
-            faux.efeito_digitar(cfg['CAPITULOS']['1']['Texto'])
+            faux.efeito_digitar(capitulos.CAPITULOS['1']['texto'])
             
             faux.enter()
 
