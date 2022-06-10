@@ -53,7 +53,7 @@ def efeito_digitar(capitulo: dict):
             if letra == ',' or letra == '.':
                 sleep(.2)
             else:
-                sleep(.03)
+                sleep(.02)
         
 
 def enter(): input(f'\n{FCORES["Amarelo"]}[ENTER]{FCORES["Branco"]}')
